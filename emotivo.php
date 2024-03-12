@@ -32,8 +32,8 @@
                 <input type="radio" name="question4" value="c"> c) Indeciso.<br>
 
                 <p>5. Quando pensa no futuro, constantemente você:</p>
-                <input type="radio" name="question5" value="a"> a) Tem grandes emoções, ou muito feliz, ou muito triste etc<br>
                 <input type="radio" name="question5" value="b"> b) Pensa em todas possibilidades sem mudar seu ânimo emocional (aqui você pode se cansar de pensar demais)<br>
+                <input type="radio" name="question5" value="a"> a) Tem grandes emoções, ou muito feliz, ou muito triste etc<br>
                 <input type="radio" name="question5" value="c"> c) Indeciso.<br>
 
                 <p>6. Seu humor e estado de ânimo, tende a ser:</p>
