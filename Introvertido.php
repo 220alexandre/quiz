@@ -66,7 +66,7 @@
             Valor das alternativas: A= 1, B= 0 e C= 0,5. Após responder toda a sessão de 7 perguntas some o resultado. Resultados com 0,5 são arredondados para baixo.
         <p>De 1 a 3: Introvertido(a)</p>
         <p>De 5 a 7: Extrovertido(a)</p>
-        <p> Médio</p>
+        <p>4: Médio</p>
         </p>
     </div>
     <?php if (!isset($_POST['submit'])) : ?>
