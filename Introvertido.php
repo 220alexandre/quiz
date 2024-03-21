@@ -60,7 +60,7 @@
     </style>
 </head>
 <div class="cont">
-    <h1>Saiba se voce é uma pessoa emotiva, responda as questos abaixo</h1>
+    <h3>Saiba se voce é uma pessoa emotiva, responda as questos abaixo</h3>
     <div class="respostas">
         <p>Soma das respostas:
             Valor das alternativas: A= 1, B= 0 e C= 0,5. Após responder toda a sessão de 7 perguntas some o resultado. Resultados com 0,5 são arredondados para baixo.
