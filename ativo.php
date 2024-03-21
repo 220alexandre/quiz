@@ -1,49 +1,48 @@
- <?php 
- include("./public/header.html");
-    ?>
-<div class="container">
+
+<div class="cont">
         <h1>Saiba se voce é uma pessoa emotiva, responda as questos abaixo</h1>
         <div class="respostas">
             <p>Soma das respostas:
             Valor das alternativas: A= 1, B= 0 e C= 0,5. Após responder toda a sessão de 7 perguntas some o resultado. Resultados com 0,5 são arredondados para baixo.
-            <p>De 1 a 3: Não Emotivo (a)</p>
-            <p>De 5 a 7: Emotivo (a)</p>                              <p> Se o resultado deu 4, revise.</p></p>
+            <p>De 1 a 3: Introvertido (a)</p>
+            <p>De 5 a 7: Extrovertido (a)</p> 
+            <p> Médio</p></p>
         </div>
         <?php if (!isset($_POST['submit'])): ?>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <form method="post">
                 <p>1. Diante de um acontecimento com carga emocional, você tende a</p>
-                <input type="radio" name="question1" value="a"> a) Sentir mais no coração o choque<br>
-                <input type="radio" name="question1" value="b"> b) Pensar mais do que sentir<br>
+                <input type="radio" name="question1" value="a"> a) Reagir de forma exterior à ofensa<br>
+                <input type="radio" name="question1" value="b"> b) Não reagir prontamente, guardando para si o sentimento, reagindo apenas se passar dos limites.<br>
                 <input type="radio" name="question1" value="c"> c) Indeciso<br>
 
                 <p>2. Quando você não encontra a solução de um problema, inclina-se a:</p>
-                <input type="radio" name="question2" value="a"> a) Preocupar-se e se angustiar interiormente<br>
-                <input type="radio" name="question2" value="b"> b) Sabe esperar, com pensamentos mais racionais<br>
+                <input type="radio" name="question2" value="a"> a) Ter que fazer algo, com alguém ou consigo<br>
+                <input type="radio" name="question2" value="b"> b) Fazer pouca coisa, diminuindo o ritmo e curtindo uma certa tranquilidade<br>
                 <input type="radio" name="question2" value="c"> c) Indeciso.<br>
 
                 <p>3. Em seus relacionamentos amorosos, você tende a:</p>
-                <input type="radio" name="question3" value="b"> b)  Sentir tudo de forma mais moderada, tendo uma ligação mais “mental” com a pessoa<br>
-                <input type="radio" name="question3" value="a"> a) Sentir emocionalmente impactado e a ligação se dá pelo coração<br>
+                <input type="radio" name="question3" value="b"> b)  Ficar mais na sua, sem se envolver muito<br>
+                <input type="radio" name="question3" value="a"> a) Conhecer pessoas novas e se misturar<br>
                 <input type="radio" name="question3" value="c"> c) Indeciso.<br>
 
                 <p>4. Quando entram em confronto com você, tem propensão a:</p>
-                <input type="radio" name="question4" value="b"> b)  Procura entender a situação antes de fazer algo<br>
-                <input type="radio" name="question4" value="a"> a) Instintivamente se indignar interiormente, com grande comoção<br>
+                <input type="radio" name="question4" value="b"> b) Lugar importante, no qual mais fico<br>
+                <input type="radio" name="question4" value="a"> a) Lugar de descanso apenas, ambiente comum<br>
                 <input type="radio" name="question4" value="c"> c) Indeciso.<br>
 
                 <p>5. Quando pensa no futuro, constantemente você:</p>
-                <input type="radio" name="question5" value="b"> b) Pensa em todas possibilidades sem mudar seu ânimo emocional (aqui você pode se cansar de pensar demais)<br>
-                <input type="radio" name="question5" value="a"> a) Tem grandes emoções, ou muito feliz, ou muito triste etc<br>
+                <input type="radio" name="question5" value="b"> b) Contar a muitas pessoas<br>
+                <input type="radio" name="question5" value="a"> a) Guardar para si, ou para pouquíssimas pessoas<br>
                 <input type="radio" name="question5" value="c"> c) Indeciso.<br>
 
                 <p>6. Seu humor e estado de ânimo, tende a ser:</p>
-                <input type="radio" name="question6" value="b"> b)  Geralmente equilibrado, aconteça o que acontecer<br>
-                <input type="radio" name="question6" value="a"> a) Inconstante, passando de alegria à tristeza, entusiasmo ao desânimo, sem muito entendimento do porquê.<br>
+                <input type="radio" name="question6" value="b"> b) Cansado, como se tivessem te sugado<br>
+                <input type="radio" name="question6" value="a"> a) Enérgico, as pessoas te dão energia<br>
                 <input type="radio" name="question6" value="c"> c) Indeciso.<br>
 
                 <p>7. Em uma situação complicada e difícil, você se sente geralmente:</p>
-                <input type="radio" name="question7" value="a"> a) Emocionalmente impactado<br>
-                <input type="radio" name="question7" value="b"> b)  De forma um pouco mais equilibrada<br>
+                <input type="radio" name="question7" value="a"> a) Se vestir melhor, para que possam te notar de algum modo<br>
+                <input type="radio" name="question7" value="b"> b) Usar roupas mais fechadas ou que te deixam confortável<br>
                 <input type="radio" name="question7" value="c"> c) Indeciso.<br>
 
                 <input type="submit" name="submit" value="Submit">
@@ -80,13 +79,13 @@
                 }
 
                 if ($score >= 5 && $score <= 7) {
-                    echo "<p>Emotivo(a)</p>";
+                    echo "<p>Extrovertido (a)</p>";
                     echo "Seu resultado foi de $score";
                 } else if ($score >= 1 && $score <= 3) {
-                    echo "<p>Não Emotivo(a)</p>";
+                    echo "<p>Introvertido (a)</p>";
                     echo "Seu resultado foi de $score";
                 } else {
-                    echo "<p>Seu o resultado deu 4, revise</p>";
+                    echo "<p>Médio</p>";
                 }
                 ?>
                 <p><a href="Introvertido.php">Ir para o proximo</a></p>
@@ -96,8 +95,3 @@
                 
         <?php endif; ?>
     </div>
-
-    
-<?php 
-include('./public/footer.html');
-?>
