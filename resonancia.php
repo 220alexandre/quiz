@@ -64,46 +64,46 @@
     <div class="respostas">
         <p>Soma das respostas:
             Valor das alternativas: A= 1, B= 0 e C= 0,5. Após responder toda a sessão de 7 perguntas some o resultado. Resultados com 0,5 são arredondados para baixo.
-        <p>De 1 a 3: Não Ativo (a)</p>
-        <p>De 5 a 7: Ativo (a) </p>
+        <p>De 1 a 3: Primário(a)</p>
+        <p>De 5 a 7: Secundário(a) </p>
         <p>Se o resultado deu 4, revise</p>
         </p>
     </div>
     <?php if (!isset($_POST['submit'])) : ?>
         <form method="post">
-            <p>1. Quando tem alguma ideia nova, você tende a:</p>
-            <input type="radio" name="question1" value="b"> b) Ir pensando, reformulando, dando um tempo até ser possível colocar em prática<br>
-            <input type="radio" name="question1" value="a"> a) Logo quer agir e sente grande vontade para isso<br>
+            <p>1. Quando te ofendem, você tende a:</p>
+            <input type="radio" name="question1" value="a"> a) Guardar e remoer esse acontecimento, sendo difícil esquecer<br>
+            <input type="radio" name="question1" value="b"> b) Esquecer e seguir em frente logo depois<br>
             <input type="radio" name="question1" value="c"> c) Indeciso<br>
 
-            <p>2. Diante a atividades maçantes e que exigem esforço, tem a propensão de:</p>
-            <input type="radio" name="question2" value="b"> b) Ser mais lento, demorar e sentir vontade de desistir<br>
-            <input type="radio" name="question2" value="a"> a) Sente-se desafiado e consegue persistir na atividade<br>
+            <p>2. Em um projeto que participa, você se sente melhor:</p>
+            <input type="radio" name="question2" value="b"> b) Improvisando e decidindo a cada momento o que fazer<br>
+            <input type="radio" name="question2" value="a"> a) Trabalhando de forma que tudo seja pré-estabelecido e ordenado<br>
             <input type="radio" name="question2" value="c"> c) Indeciso.<br>
 
-            <p>3. Depois de uma atividade física, você geralmente:</p>
-            <input type="radio" name="question3" value="a"> a) Se sente enérgico e se recupera rápido<br>
-            <input type="radio" name="question3" value="b"> b) Precisa de grande esforço e a recuperação é mais lenta<br>
+            <p>3. Com seus objetos pessoais ou bens, você é mais:</p>
+            <input type="radio" name="question3" value="b"> b) Desapegado, conseguindo trocar ou dar a alguém<br>
+            <input type="radio" name="question3" value="a"> a) Apegado, como se eles fossem uma extensão de você<br>
             <input type="radio" name="question3" value="c"> c) Indeciso.<br>
 
-            <p>4. Em seu tempo livre, você prefere:</p>
-            <input type="radio" name="question4" value="b"> b) Descansar, não se movimentando muito<br>
-            <input type="radio" name="question4" value="a"> a) Fazer alguma coisa, não conseguindo ficar muito parado(a)<br>
+            <p>4.  Em sua rotina, de modo geral, inclina-se a:</p>
+            <input type="radio" name="question4" value="a"> a) Manter as coisas no seu lugar, sem muitas mudanças de horários<br>
+            <input type="radio" name="question4" value="b"> b) Mudar sempre tudo de lugar e gosta de alternar horários<br>
             <input type="radio" name="question4" value="c"> c) Indeciso.<br>
 
-            <p>5. Sobre seus sonhos e pensamentos futuros, cogita normalmente:</p>
-            <input type="radio" name="question5" value="a"> a) Estar fazendo muitas coisas de seu gosto<br>
-            <input type="radio" name="question5" value="b"> b) Alcançando uma calma e descanso<br>
+            <p>5. Sobre sua história, você funciona de modo que:</p>
+            <input type="radio" name="question5" value="b"> b) Não pensa muito nos acontecimentos, mesmo os importantes<br>
+            <input type="radio" name="question5" value="a"> a) Está sempre revivendo com facilidade os momentos em sua mente<br>
             <input type="radio" name="question5" value="c"> c) Indeciso.<br>
 
-            <p>6. As pessoas ao seu lado costumam te chamar de:</p>
-            <input type="radio" name="question6" value="a"> a) Mais Inquieto(a)<br>
-            <input type="radio" name="question6" value="b"> b) Mais Quieto(a)<br>
+            <p>6. Seu jeito de ser, tende a ser:</p>
+            <input type="radio" name="question6" value="a"> a) Mais teimoso, com ideias bem firmes<br>
+            <input type="radio" name="question6" value="b"> b) Flexível, conseguindo mudar de ideia facilmente<br>
             <input type="radio" name="question6" value="c"> c) Indeciso.<br>
 
-            <p>7. Sobre se divertir, tende geralmente a:</p>
-            <input type="radio" name="question7" value="b"> b) Buscar coisas mais tranquilas e sem muito alvoroço<br>
-            <input type="radio" name="question7" value="a"> a) Gostar da agitação e atividades mais enérgicas<br>
+            <p>7. Diante de um esforço maior que precisa colocar em um projeto, tem o impulso de:</p>
+            <input type="radio" name="question7" value="b"> b) Abandonar, e começar outra coisa<br>
+            <input type="radio" name="question7" value="a"> a) Se manter constante, acabando o que começou<br>
             <input type="radio" name="question7" value="c"> c) Indeciso.<br>
 
             <input type="submit" name="submit" value="Enviar">
@@ -140,17 +140,17 @@
         }
 
         if ($score >= 5 && $score <= 7) {
-            echo "<p>Ativo(a)</p>";
+            echo "<p>Secundário(a)</p>";
             echo "Seu resultado foi de $score";
         } else if ($score >= 1 && $score <= 3) {
-            echo "<p>Não ativo(a)</p>";
+            echo "<p>Primário(a)</p>";
             echo "Seu resultado foi de $score";
         } else {
             echo "<p>Se o resultado deu 4, revise</p>";
         }
         ?>
         <div class="nextpage">
-            <p><a href="#">Ir para o proximo</a></p>
+            <p><a href="#">Quer saber mais sobre? clique aqui e receba um ebook gratuito</a></p>
         </div>
         <?php
 
